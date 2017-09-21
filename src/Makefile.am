@@ -16,6 +16,8 @@ AM_CFLAGS += $(if $(GIT_VERSION),-DGIT_VERSION=\"$(GIT_VERSION)\",)
 
 AM_LDFLAGS = -pthread
 
+AM_LDFLAGS += -lrt
+
 bin_PROGRAMS = rmbt
 rmbt_SOURCES = rmbt.c \
     rmbt_common.h \
